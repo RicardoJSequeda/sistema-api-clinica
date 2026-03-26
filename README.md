@@ -21,53 +21,7 @@ Demostrar habilidades de backend orientado a datos:
 <img width="621" height="480" alt="image" src="https://github.com/user-attachments/assets/864d4d34-3d87-4a5b-84a0-d7add5b3d56a" />
 
 
----
 
-## 📡 Endpoints disponibles (25+)
-
-### Pacientes `/pacientes`
-| Método | Ruta | Descripción |
-|--------|------|-------------|
-| GET | `/pacientes/` | Listar con paginación, búsqueda y filtro por ciudad |
-| GET | `/pacientes/{id}` | Obtener paciente completo por ID |
-| GET | `/pacientes/doc/{doc}` | Buscar por número de documento |
-| GET | `/pacientes/{id}/citas` | Historial de citas del paciente |
-| POST | `/pacientes/` | Crear paciente (valida documento y email únicos) |
-| PATCH | `/pacientes/{id}` | Actualización parcial |
-| DELETE | `/pacientes/{id}` | Baja lógica (activo=False) |
-
-### Médicos `/medicos`
-| Método | Ruta | Descripción |
-|--------|------|-------------|
-| GET | `/medicos/` | Listar con filtro por especialidad |
-| GET | `/medicos/{id}` | Perfil completo del médico |
-| GET | `/medicos/{id}/citas` | Agenda del médico |
-| POST | `/medicos/` | Registrar médico |
-| PATCH | `/medicos/{id}` | Actualizar datos |
-| DELETE | `/medicos/{id}` | Dar de baja |
-
-### Citas `/citas`
-| Método | Ruta | Descripción |
-|--------|------|-------------|
-| GET | `/citas/` | Listar con filtros múltiples |
-| GET | `/citas/{id}` | Detalle con paciente, médico, diagnósticos |
-| POST | `/citas/` | Agendar con validación de conflictos de horario |
-| PATCH | `/citas/{id}` | Actualizar estado, notas, valor |
-| DELETE | `/citas/{id}` | Cancelar cita |
-| POST | `/citas/{id}/diagnostico` | Agregar diagnóstico CIE-10 |
-| POST | `/citas/{id}/prescripcion` | Agregar prescripción médica |
-
-### Analytics `/analytics`
-| Método | Ruta | Descripción |
-|--------|------|-------------|
-| GET | `/analytics/kpis` | KPIs globales: pacientes, citas, ingresos, tasa asistencia |
-| GET | `/analytics/citas-por-especialidad` | Citas, cancelaciones e ingresos por especialidad |
-| GET | `/analytics/diagnosticos-frecuentes` | Top diagnósticos CIE-10 |
-| GET | `/analytics/ranking-medicos` | Ranking por citas completadas e ingresos |
-| GET | `/analytics/tendencia-mensual` | Evolución mensual por año |
-| GET | `/analytics/ocupacion-semanal` | Demanda por día de la semana |
-
----
 
 ## 🛠️ Stack Tecnológico
 
@@ -98,46 +52,6 @@ Demostrar habilidades de backend orientado a datos:
 
 ---
 
-## 🚀 Instalación y ejecución
-
-```bash
-# 1. Clonar
-git clone https://github.com/ricardosequeda/clinica-api
-cd clinica-api
-
-# 2. Entorno virtual
-python -m venv venv
-source venv/bin/activate      # Linux/Mac
-venv\Scripts\activate         # Windows
-
-# 3. Instalar dependencias
-pip install -r requirements.txt
-
-# 4. Configurar base de datos
-cp .env.example .env
-# Editar .env si quieres usar PostgreSQL
-# Por defecto usa SQLite — no requiere instalación adicional
-
-# 5. Poblar con datos de prueba
-python seed_data.py
-
-# 6. Levantar la API
-uvicorn app.main:app --reload
-
-# 7. Abrir documentación Swagger
-# http://localhost:8000/docs
-```
-
-### Conexión a PostgreSQL (opcional)
-```bash
-# Crear base de datos en PostgreSQL
-createdb clinica_db
-
-# Actualizar .env
-DATABASE_URL=postgresql://usuario:password@localhost:5432/clinica_db
-
-# Las tablas se crean automáticamente al iniciar la API
-```
 
 ---
 
