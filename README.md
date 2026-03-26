@@ -18,24 +18,8 @@ Demostrar habilidades de backend orientado a datos:
 
 ## 🏗️ Arquitectura
 
-```
-clinica-api/
-│
-├── app/
-│   ├── main.py          → FastAPI app, CORS, routers, Swagger config
-│   ├── database.py      → SQLAlchemy engine, sesión, get_db()
-│   ├── models.py        → ORM: Paciente, Medico, Cita, Diagnostico...
-│   ├── schemas.py       → Pydantic: validación y serialización
-│   └── routers/
-│       ├── pacientes.py → CRUD + búsqueda + historial de citas
-│       ├── medicos.py   → CRUD + agenda por médico
-│       ├── citas.py     → Agendamiento + validación de conflictos
-│       └── analytics.py → KPIs, rankings, tendencias, diagnósticos
-│
-├── seed_data.py         → Pobla la BD con datos de prueba
-├── requirements.txt
-└── .env.example
-```
+<img width="621" height="480" alt="image" src="https://github.com/user-attachments/assets/864d4d34-3d87-4a5b-84a0-d7add5b3d56a" />
+
 
 ---
 
