@@ -21,6 +21,7 @@ Demostrar habilidades de backend orientado a datos:
 <img width="621" height="480" alt="image" src="https://github.com/user-attachments/assets/864d4d34-3d87-4a5b-84a0-d7add5b3d56a" />
 
 
+<img width="650" height="490" alt="image" src="https://github.com/user-attachments/assets/1ddfac83-24a7-44c3-ae08-8c457de62dbe" />
 
 
 ## 🛠️ Stack Tecnológico
